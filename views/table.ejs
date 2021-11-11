@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <a href="/table">Get Studentlist</a>
+    </div>
+    <div>
+      <a href="/">Home</a>
+    </div>
+    <hr />
+
+    <% if(studentlist!=null) { %>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Rollno</th>
+        <th>Branch</th>
+        <th>Hobbies</th>
+      </tr>
+      <%studentlist.forEach( function(row){%>
+      <tr>
+        <form action="/delete" method="post">
+          <td><%= row.name %></td>
+          <td><%= row.rollNo %></td>
+          <td><%= row.branch %></td>
+          <td><%= row.hobbies %></td>
+          <td><button type="submit" name="submit"  value="<%=row._id%>">Delete</button></td>
+        </form>
+      </tr>
+      <% }) %>
+    </table>
+    <% } %>
+  </body>
+</html>
