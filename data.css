@@ -1,0 +1,31 @@
+.my-button{
+        width: 200px;
+        height:50px;
+        font-size:20px;
+        background-color: rgb(252, 240, 71);
+        text-align:center;
+        border:0;
+    }
+.Crud_Operation{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.Crud_Operation h1{
+    font-size:50px;
+    text-align:center;
+    text-transform:uppercase;
+    margin:20px;
+
+}
+.Crud_Operation input{
+    font-size:20px;
+    padding:15px 10px;
+    width:100%;
+    
+    border-radius:5%;
+}
+.Crud_Operation p{
+    font-size:50;
+}
