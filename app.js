@@ -20,11 +20,11 @@ mongoose.connection.on("connected", () => {
 const studentModel = require("./model/student");
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/views/crud.html");
+  res.sendFile(__dirname + "/docs/crud.html");
 });
 
 app.get("/dataEntry", function (req, res) {
-  res.sendFile(__dirname + "/views/data_entry.html");
+  res.sendFile(__dirname + "/docs/data_entry.html");
 });
 
 app.get("/table", function (req, res) {
@@ -51,7 +51,7 @@ app.post("/create", function (req, res) {
     if (err) {
       res.send(err);
     } else {
-      res.sendFile(__dirname + "/views/crud.html");
+      res.sendFile(__dirname + "/docs/crud.html");
     }
   });
 });
